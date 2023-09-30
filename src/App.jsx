@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Biodata from "./components/biodata";
 import Navigation from "./components/nav";
@@ -103,6 +103,33 @@ function App() {
     setX(`${ev.clientX}px`);
     setY(`${ev.clientY}px`);
   };
+  useEffect(() => {
+    const darkIcon = document.getElementById("dark-icon");
+    const lightIcon = document.getElementById("light-icon");
+
+    const toggleFavicon = (isDarkMode) => {
+      if (isDarkMode) {
+        darkIcon.setAttribute("href", "img/logo-dark.png");
+        lightIcon.setAttribute("href", "");
+      } else {
+        lightIcon.setAttribute("href", "img/logo-light.png");
+        darkIcon.setAttribute("href", "");
+      }
+    };
+
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    toggleFavicon(prefersDarkScheme.matches);
+
+    const mediaQueryListener = (e) => {
+      toggleFavicon(e.matches);
+    };
+
+    prefersDarkScheme.addListener(mediaQueryListener);
+
+    return () => {
+      prefersDarkScheme.removeListener(mediaQueryListener);
+    };
+  }, []);
 
   return (
     <LightPointer onPointerMove={handlePointerMove}>
