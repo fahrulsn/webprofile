@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { myData } from "../assets/data";
 
 const Data = styled.div`
   padding: 0.2;
@@ -52,18 +53,15 @@ const Data = styled.div`
     }
   }
 `;
-
+const data = myData.biodata[0];
 const Biodata = () => {
   return (
     <Data>
-      <h1>Fahrul Setiawan</h1>
+      <h1>{data.name}</h1>
       <h3>
-        Web Developer <br /> Graphic Designer
+        {data.role1} <br /> {data.role2}
       </h3>
-      <p>
-        I design web-based products and digital experiences with a focus on
-        accessibility and simplicity.
-      </p>
+      <p>{data.desc}</p>
     </Data>
   );
 };

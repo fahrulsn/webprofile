@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { styled } from "styled-components";
+import { myData } from "../assets/data";
 
 const ExpWrapper = styled.div`
   margin: 2rem 0;
@@ -80,65 +81,26 @@ const Skills = styled.div`
   }
 `;
 
+const data = myData.exper;
 const Experience = () => {
   return (
     <ExpWrapper id="experience">
-      <InExp className="onHover">
-        <Year>Feb - Jul 2023</Year>
-        <InfoExp>
-          <h3>Cloud Computing Cohort {"·"} Bangkit Academy</h3>
-          <p>
-            Learning technical aspects of cloud computing and GCP and soft
-            skills such as critical thinking, project management, and time
-            management. Collaborating on a team project to create a useful
-            product for the community.
-          </p>
-          <Skills>
-            <span>Google Cloud Platform</span>
-            <span>JavaScript</span>
-            <span>Node.js</span>
-            <span>Hapi</span>
-            <span>Docker</span>
-          </Skills>
-        </InfoExp>
-      </InExp>
-      <InExp className="onHover">
-        <Year>2020 - 2023</Year>
-        <InfoExp>
-          <h3>Admin Design Staff {"·"} Golden Nusantara</h3>
-          <p>
-            Providing custom design solutions based on client requests and
-            redesigning client-provided designs for production purposes.
-            Managing warehouse stock administration and handling monthly tax
-            input and reporting.
-          </p>
-          <Skills>
-            <span>Corel Draw</span>
-            <span>Photoshop</span>
-          </Skills>
-        </InfoExp>
-      </InExp>
-      <InExp className="onHover">
-        <Year>2018 - 2020</Year>
-        <InfoExp>
-          <h3>IT Support Staff {"·"} SinarOzora Lestari</h3>
-          <p>
-            Performing installation of operating systems and software on office
-            products and equipment, designing brochures, editing videos for
-            marketing and presentation purposes, creating simple websites,
-            monitoring product display signage through cloud services, and
-            troubleshooting hardware, software, and network issues.
-          </p>
-          <Skills>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Corel Draw</span>
-            <span>Photoshop</span>
-            <span>After Effect</span>
-            <span>Vegas Pro</span>
-          </Skills>
-        </InfoExp>
-      </InExp>
+      {data.map((exp, index) => (
+        <InExp key={index} className="onHover">
+          <Year>{exp.year}</Year>
+          <InfoExp>
+            <h3>
+              {exp.pos} {"·"} {exp.comp}
+            </h3>
+            <p>{exp.desc}</p>
+            <Skills>
+              {exp.skills.map((skill, i) => (
+                <span key={i}>{skill}</span>
+              ))}
+            </Skills>
+          </InfoExp>
+        </InExp>
+      ))}
     </ExpWrapper>
   );
 };

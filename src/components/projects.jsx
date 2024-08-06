@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import styled from "styled-components";
+import { myData } from "../assets/data";
 
 const Project = styled.div`
   margin: 4rem 0;
@@ -70,32 +71,34 @@ const Techs = styled.div`
   }
 `;
 
+const data = myData.projects;
 const Projects = () => {
   return (
     <>
-      <Project id="projects">
-        <ProjImg>
-          <img src={"/img/sortify.jpg"} alt="" />
-        </ProjImg>
-        <ProjInfo>
-          <h3>Sortify App </h3>
-          <p>
-            Sortify is a image waste detection app to detect user's type of
-            waste. It can detect type of waste to distinguish different kind of
-            waste and identify recyable waste also with voice assist feature for
-            disabilities.
-          </p>
-          <Techs>
-            <span>Google Cloud Platform</span>
-            <span>JavaScript</span>
-            <span>Python</span>
-            <span>Node.js</span>
-            <span>Hapi</span>
-            <span>Docker</span>
-            <span>FastAPI</span>
-          </Techs>
-        </ProjInfo>
-      </Project>
+      {data.map((project, index) => (
+        <Project key={index} id="projects">
+          <ProjImg>
+            <img src={project.img} alt="" />
+          </ProjImg>
+          <ProjInfo>
+            <h3>
+              <a
+                href="https://github.com/Sortify-Capstone/Sortify"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {project.title}
+              </a>
+            </h3>
+            <p>{project.desc}</p>
+            <Techs>
+              {project.techs.map((tech, i) => (
+                <span key={i}>{tech}</span>
+              ))}
+            </Techs>
+          </ProjInfo>
+        </Project>
+      ))}
     </>
   );
 };
