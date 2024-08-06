@@ -30,7 +30,7 @@ const About = () => {
         into programming and web development. Fast forward to today, I am
         pursuing a Bachelor's degree in Computer Science and have the
         opportunity to create a product for the community through the
-        <span>Bangkit Academy</span>
+        <span> Bangkit Academy </span>
         program.
       </p>
       <p>
