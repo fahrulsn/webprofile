@@ -94,7 +94,15 @@ const RadialBackground = styled.div`
     z-index: -30;
   }
 `;
-
+const GridBg = styled.div`
+  background-image: url("/img/ooorganize.svg");
+  /* background-size: 70%; */
+  z-index: -30;
+  opacity: 0.05;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+`;
 function App() {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
@@ -136,6 +144,7 @@ function App() {
       <RadialBackground
         style={window.innerWidth <= 768 ? {} : { "--x": x, "--y": y }}
       />
+      <GridBg></GridBg>
       <LeftWrapper>
         <Left>
           <Biodata />
