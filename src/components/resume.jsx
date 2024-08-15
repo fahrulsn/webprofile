@@ -17,7 +17,6 @@ const Wrapper = styled.div`
   background-position: 0% -96%;
   background-image: linear-gradient(
     to bottom,
-
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 50%,
     rgba(61, 255, 174, 1) 50%,

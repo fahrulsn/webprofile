@@ -45,18 +45,18 @@ const Right = styled.div`
 const Left = styled.div`
   position: fixed;
   flex-direction: column;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 0 0 0;
   border-radius: 0.5rem;
   display: flex;
   width: 32%;
   justify-content: space-between;
   height: calc(100vh - 12rem);
   transform-origin: 100%;
-  transform: perspective(1000px) rotateY(12deg);
+  /* transform: perspective(1000px) rotateY(12deg); */
   transition: 0.5s ease;
-  background-color: rgba(63, 69, 103, 0.3);
-  box-shadow: 0px 0px 2rem rgba(63, 69, 103, 0.2);
-  backdrop-filter: blur(5px);
+  /* background-color: rgba(63, 69, 103, 0.3); */
+  /* box-shadow: 0px 0px 2rem rgba(63, 69, 103, 0.2); */
+  /* backdrop-filter: blur(5px); */
   @media (max-width: 1036px) {
     position: relative;
     padding: 1rem 1.5rem;

@@ -2,37 +2,60 @@ import { styled } from "styled-components";
 import { myData } from "../assets/data";
 
 const Data = styled.div`
-  padding: 0.2;
+  padding: 0.1;
   width: 100%;
   h1 {
-    font-size: 2.8rem;
+    font-size: 4.5rem;
     margin: 0 0 1rem 0;
-    text-shadow: -2px 1px #7f7f7f;
+    background-size: 400% 100%;
+    background-position: 0% 0%;
+    background-image: linear-gradient(
+      120deg,
+      rgb(235, 235, 235) 0%,
+      rgb(169, 251, 221) 33%,
+      rgb(255, 236, 191) 66%,
+      rgb(235, 235, 235) 100%
+    );
+    background-clip: text;
+    color: transparent;
+    animation: moveGradient 30s linear infinite;
   }
   h3 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
-    text-shadow: -0.5px 0px #7f7f7f;
   }
   p {
-    font-size: 1rem;
-    text-shadow: -0.5px 0px #7f7f7f;
+    font-size: 0.9rem;
     font-weight: 300;
+    width: 80%;
+  }
+  span {
+    color: rgb(61, 255, 174);
+    background-color: rgba(0, 201, 117, 0.22);
+    padding: 8px 12px;
+    border-radius: 30px;
+    font-weight: 500;
+  }
+  @keyframes moveGradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 400% 0%;
+    }
   }
   @media (max-width: 1280px) {
     h1 {
-      font-size: 2.7rem;
-      text-shadow: 0px 0px #7f7f7f;
+      font-size: 3.7rem;
     }
   }
   @media (max-width: 768px) {
     h1 {
       font-size: 2.7rem;
-      text-shadow: 0px 0px #7f7f7f;
     }
     h3 {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
     p {
       font-size: 1.1rem;
@@ -42,10 +65,9 @@ const Data = styled.div`
   @media (max-width: 450px) {
     h1 {
       font-size: 2.3rem;
-      text-shadow: 0px 0px #7f7f7f;
     }
     h3 {
-      font-size: 1.1rem;
+      font-size: 0.8rem;
     }
     p {
       font-size: 1rem;
@@ -59,7 +81,7 @@ const Biodata = () => {
     <Data>
       <h1>{data.name}</h1>
       <h3>
-        {data.role1} <br /> {data.role2}
+        <span>{data.role1}</span> <span>{data.role2}</span>
       </h3>
       <p>{data.desc}</p>
     </Data>

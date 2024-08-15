@@ -5,7 +5,7 @@ const Nav = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 40%;
+  width: 45%;
 
   cursor: pointer;
   p {
@@ -15,10 +15,10 @@ const Nav = styled.div`
     letter-spacing: 1px;
     margin: 3px 0;
     transition: 0.5s ease;
-    padding: 5px 7px;
+    padding: 8px 10px;
     border-radius: 5px;
     background-size: 200% 100%;
-    background-position: 99.8% 0%;
+    background-position: 99.6% 0%;
     background-image: linear-gradient(
       to right,
       rgba(255 255, 255, 1) 0%,
