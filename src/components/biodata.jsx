@@ -9,6 +9,7 @@ const Data = styled.div`
     margin: 0 0 1rem 0;
     background-size: 400% 100%;
     background-position: 0% 0%;
+    color: rgb(235, 235, 235);
     background-image: linear-gradient(
       120deg,
       rgb(235, 235, 235) 0%,
@@ -18,6 +19,8 @@ const Data = styled.div`
     );
     background-clip: text;
     color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     animation: moveGradient 30s linear infinite;
   }
   h3 {
@@ -60,6 +63,7 @@ const Data = styled.div`
     p {
       font-size: 1.1rem;
       font-weight: 300;
+      width: 100%;
     }
   }
   @media (max-width: 450px) {
@@ -67,7 +71,7 @@ const Data = styled.div`
       font-size: 2.3rem;
     }
     h3 {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
     p {
       font-size: 1rem;
