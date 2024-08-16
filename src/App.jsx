@@ -59,10 +59,10 @@ const Left = styled.div`
   /* backdrop-filter: blur(5px); */
   @media (max-width: 1036px) {
     position: relative;
-    padding: 1rem 1.5rem;
+    padding: 1rem 0.5rem;
     width: 100%;
     height: auto;
-    transform: perspective(1000px) rotateY(0deg);
+    /* transform: perspective(1000px) rotateY(0deg); */
   }
 `;
 

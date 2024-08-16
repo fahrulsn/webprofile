@@ -1,7 +1,7 @@
 export const myData = {
   biodata: [
     {
-      name: "Fahrul Setiawan",
+      name: "Fahrul ··· Setiawan",
       role1: "Graphic Designer",
       role2: "Web Developer",
       desc: "I design web-based products and digital experiences with a focus on accessibility and simplicity.",

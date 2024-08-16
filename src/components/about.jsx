@@ -3,8 +3,8 @@ import { styled } from "styled-components";
 
 const AboutWrapper = styled.div`
   width: 100%;
-  padding: 1.5rem 0 0;
-  margin: 0 0 2rem 0;
+  padding: 1.5rem 0 0 0;
+  margin: 0;
   p {
     font-size: 1.1rem;
     line-height: 1.7rem;
@@ -14,7 +14,7 @@ const AboutWrapper = styled.div`
     }
   }
   @media (max-width: 768px) {
-    padding: 0;
+    padding: 0 0 0 0.5rem;
     p {
       font-size: 1rem;
     }

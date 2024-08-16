@@ -68,7 +68,7 @@ const Data = styled.div`
   }
   @media (max-width: 450px) {
     h1 {
-      font-size: 2.3rem;
+      font-size: 3.5rem;
     }
     h3 {
       font-size: 0.9rem;
