@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { myData } from "../assets/data";
 
 const Project = styled.div`
-  margin: 4rem 0;
+  margin: 1rem 0;
   display: flex;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -12,6 +12,7 @@ const Project = styled.div`
   &:hover {
     background-color: rgba(63, 69, 103, 0.3);
     box-shadow: 0px 0px 2rem rgba(63, 69, 103, 0.2);
+    backdrop-filter: blur(2px);
   }
   &:hover h3 {
     color: rgb(61, 255, 174);

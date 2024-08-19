@@ -5,6 +5,7 @@ import Navigation from "./components/nav";
 import Content from "./components/content";
 import Socmed from "./components/socmed";
 import Footer from "./components/footer";
+import Resume from "./components/resume";
 
 const RightWrapper = styled.div`
   display: flex;
@@ -148,6 +149,7 @@ function App() {
       <LeftWrapper>
         <Left>
           <Biodata />
+          <Resume />
           <Navigation />
           <Socmed />
         </Left>

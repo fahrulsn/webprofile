@@ -2,7 +2,6 @@
 import About from "./about";
 import Experience from "./experience";
 import Projects from "./projects";
-import Resume from "./resume";
 import styled from "styled-components";
 
 const SectionTitle = styled.div`
@@ -42,7 +41,7 @@ const Content = () => {
         <h1>EXPERIENCES</h1>
       </SectionTitle>
       <Experience />
-      <Resume />
+
       <SectionTitle>
         <h1>PROJECTS</h1>
       </SectionTitle>

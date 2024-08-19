@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  margin: 3rem 0;
-  width: 60%;
-  margin: auto;
+  margin: 1rem 0 5rem 0;
+  width: 80%;
   display: flex;
   justify-content: center;
   padding: 0.8rem 0;
-  border-radius: 10px;
+  border-radius: 1rem;
   border: 1px solid rgba(61, 255, 174, 0.5);
   transition: 0.5s ease;
   color: #000314;
