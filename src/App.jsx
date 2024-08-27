@@ -150,8 +150,8 @@ function App() {
         <Left>
           <Biodata />
           <Resume />
-          <Navigation />
           <Socmed />
+          <Navigation />
         </Left>
       </LeftWrapper>
       <RightWrapper>

@@ -5,7 +5,7 @@ const Data = styled.div`
   padding: 0.1;
   width: 100%;
   h1 {
-    font-size: 4.5rem;
+    font-size: 5rem;
     margin: 0 0 1rem 0;
     background-size: 400% 100%;
     background-position: 0% 0%;
@@ -50,12 +50,12 @@ const Data = styled.div`
   }
   @media (max-width: 1280px) {
     h1 {
-      font-size: 3.7rem;
+      font-size: 4rem;
     }
   }
   @media (max-width: 768px) {
     h1 {
-      font-size: 2.7rem;
+      font-size: 3.8;
     }
     h3 {
       font-size: 1rem;

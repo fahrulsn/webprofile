@@ -1,7 +1,7 @@
 export const myData = {
   biodata: [
     {
-      name: "Fahrul ··· Setiawan",
+      name: "Fahrul Setiawan",
       role1: "Graphic Designer",
       role2: "Web Developer",
       desc: "I design web-based products and digital experiences with a focus on accessibility and simplicity.",
@@ -46,8 +46,16 @@ export const myData = {
   ],
   projects: [
     {
+      title: "aisa Bot",
+      img: "/img/aisa.jpg",
+      link: "https://github.com/fahrulsn/aisa-bot",
+      techs: ["NLP", "Machine Learning", "Python", "Tensorflow", "Flask"],
+      desc: "aisa is a Discord bot designed to detect hate speech and offensive language in Indonesian. The bot uses natural language processing (NLP) techniques to identify and flag inappropriate messages in Discord servers.",
+    },
+    {
       title: "Sortify App",
       img: "/img/sortify.jpg",
+      link: "https://github.com/Sortify-Capstone/Sortify",
       techs: [
         "Google Cloud",
         "Machine Learning",

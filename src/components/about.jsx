@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 const AboutWrapper = styled.div`
   width: 100%;
   padding: 1.5rem 0 0 0;
-  margin: 0;
+  margin: 0 0 1rem 0;
   p {
     font-size: 1.1rem;
     line-height: 1.7rem;

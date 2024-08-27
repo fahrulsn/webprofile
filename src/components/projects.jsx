@@ -2,6 +2,23 @@
 import styled from "styled-components";
 import { myData } from "../assets/data";
 
+const ProjWrapper = styled.div`
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  /* pointer-events: none; */
+
+  &:hover .onHover:not(:hover) {
+    opacity: 0.3;
+  }
+  @media (max-width: 768px) {
+    margin: 0;
+    &:hover .onHover:not(:hover) {
+      opacity: 1;
+    }
+  }
+`;
 const Project = styled.div`
   margin: 1rem 0;
   display: flex;
@@ -75,19 +92,15 @@ const Techs = styled.div`
 const data = myData.projects;
 const Projects = () => {
   return (
-    <>
+    <ProjWrapper>
       {data.map((project, index) => (
-        <Project key={index} id="projects">
+        <Project key={index} id="projects" className="onHover">
           <ProjImg>
             <img src={project.img} alt="" />
           </ProjImg>
           <ProjInfo>
             <h3>
-              <a
-                href="https://github.com/Sortify-Capstone/Sortify"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={project.link} target="_blank" rel="noreferrer">
                 {project.title}
               </a>
             </h3>
@@ -100,7 +113,7 @@ const Projects = () => {
           </ProjInfo>
         </Project>
       ))}
-    </>
+    </ProjWrapper>
   );
 };
 

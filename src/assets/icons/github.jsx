@@ -2,7 +2,7 @@ const IconGithub = () => (
   <svg
     height="100%"
     style={{
-      fill: "#CCC",
+      fill: "rgba(255, 255, 255,0.8)",
       fillRule: "evenodd",
       clipRule: "evenodd",
       strokeLinejoin: "round",

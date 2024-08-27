@@ -7,7 +7,7 @@ const ExpWrapper = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 0.9rem;
-  pointer-events: none;
+  /* pointer-events: none; */
 
   &:hover .onHover:not(:hover) {
     opacity: 0.3;
