@@ -78,10 +78,10 @@ const RadialBackground = styled.div`
   inset: 0;
   transition-duration: 0.3s;
   pointer-events: none;
-  z-index: 30;
+  z-index: -30;
   background: radial-gradient(
     600px circle at var(--x) var(--y),
-    rgba(29, 78, 216, 0.2),
+    rgba(61, 103, 217, 0.2),
     transparent 80%
   );
   height: 100vh;

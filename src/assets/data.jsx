@@ -49,7 +49,14 @@ export const myData = {
       title: "aisa Bot",
       img: "/img/aisa.jpg",
       link: "https://github.com/fahrulsn/aisa-bot",
-      techs: ["NLP", "Machine Learning", "Python", "Tensorflow", "Flask"],
+      techs: [
+        "NLP",
+        "Machine Learning",
+        "Python",
+        "Tensorflow",
+        "Flask",
+        "Docker",
+      ],
       desc: "aisa is a Discord bot designed to detect hate speech and offensive language in Indonesian. The bot uses natural language processing (NLP) techniques to identify and flag inappropriate messages in Discord servers.",
     },
     {
