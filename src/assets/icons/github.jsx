@@ -1,6 +1,6 @@
-const IconGithub = () => (
+const IconGithub = ({ height = "100%", width = "100%" }) => (
   <svg
-    height="100%"
+    height={height}
     style={{
       fill: "rgba(255, 255, 255,0.8)",
       fillRule: "evenodd",
@@ -10,7 +10,7 @@ const IconGithub = () => (
     }}
     version="1.1"
     viewBox="0 0 512 512"
-    width="100%"
+    width={width}
     xmlSpace="preserve"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"

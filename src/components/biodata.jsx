@@ -27,6 +27,7 @@ const Data = styled.div`
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
   }
   p {
     font-size: 0.9rem;
@@ -84,9 +85,11 @@ const Biodata = () => {
   return (
     <Data>
       <h1>{data.name}</h1>
+
       <h3>
         <span>{data.role1}</span> <span>{data.role2}</span>
       </h3>
+
       <p>{data.desc}</p>
     </Data>
   );

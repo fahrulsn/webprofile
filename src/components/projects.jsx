@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import styled from "styled-components";
 import { myData } from "../assets/data";
+import { Reveal } from "../utils/Reveal";
+import IconGithub from "../assets/icons/github";
 
 const ProjWrapper = styled.div`
   margin: 2rem 0;
@@ -33,6 +35,9 @@ const Project = styled.div`
   }
   &:hover h3 {
     color: rgb(61, 255, 174);
+  }
+  h3:hover {
+    text-decoration: underline;
   }
   @media (max-width: 768px) {
     margin: 1rem 0;
@@ -70,7 +75,23 @@ const ProjInfo = styled.div`
     width: 100%;
   }
 `;
-
+const GithubBtn = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 0.4rem 1rem;
+  color: white;
+  background: none;
+  height: auto;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid white;
+  }
+  transition: 0.5s ease;
+`;
 const Techs = styled.div`
   display: flex;
   column-gap: 0.5rem;
@@ -96,20 +117,49 @@ const Projects = () => {
       {data.map((project, index) => (
         <Project key={index} id="projects" className="onHover">
           <ProjImg>
-            <img src={project.img} alt="" />
+            <Reveal>
+              <a href={project.link}>
+                <img src={project.img} alt="" />
+              </a>
+            </Reveal>
           </ProjImg>
           <ProjInfo>
-            <h3>
-              <a href={project.link} target="_blank" rel="noreferrer">
-                {project.title}
-              </a>
-            </h3>
-            <p>{project.desc}</p>
-            <Techs>
-              {project.techs.map((tech, i) => (
-                <span key={i}>{tech}</span>
-              ))}
-            </Techs>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                padding: ".2rem 0",
+              }}
+            >
+              <Reveal>
+                <h3>
+                  <a href={project.link} target="_blank" rel="noreferrer">
+                    {project.title}
+                  </a>
+                </h3>
+              </Reveal>
+              <Reveal>
+                <GithubBtn
+                  onClick={() =>
+                    window.open(project.github, "_blank", "noopener,noreferrer")
+                  }
+                >
+                  <IconGithub height="1.5rem" />
+                  Repos
+                </GithubBtn>
+              </Reveal>
+            </div>
+            <Reveal>
+              <p>{project.desc}</p>
+            </Reveal>
+            <Reveal>
+              <Techs>
+                {project.techs.map((tech, i) => (
+                  <span key={i}>{tech}</span>
+                ))}
+              </Techs>
+            </Reveal>
           </ProjInfo>
         </Project>
       ))}

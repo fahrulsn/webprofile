@@ -46,9 +46,10 @@ export const myData = {
   ],
   projects: [
     {
-      title: "aisa Bot",
+      title: "aisa",
       img: "/img/aisa.jpg",
-      link: "https://github.com/fahrulsn/aisa-bot",
+      link: "https://aisa-three.vercel.app/",
+      github: "https://github.com/fahrulsn/aisa-bot",
       techs: [
         "NLP",
         "Machine Learning",
@@ -62,7 +63,8 @@ export const myData = {
     {
       title: "Sortify App",
       img: "/img/sortify.jpg",
-      link: "https://github.com/Sortify-Capstone/Sortify",
+      link: "https://sortify-web.vercel.app/",
+      github: "https://github.com/Sortify-Capstone/Sortify",
       techs: [
         "Google Cloud",
         "Machine Learning",

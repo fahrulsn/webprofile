@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { styled } from "styled-components";
 import { myData } from "../assets/data";
+import { Reveal } from "../utils/Reveal";
 
 const ExpWrapper = styled.div`
   margin: 2rem 0;
@@ -88,17 +89,25 @@ const Experience = () => {
     <ExpWrapper id="experience">
       {data.map((exp, index) => (
         <InExp key={index} className="onHover">
-          <Year>{exp.year}</Year>
+          <Year>
+            <Reveal>{exp.year}</Reveal>
+          </Year>
           <InfoExp>
-            <h3>
-              {exp.pos} {"·"} {exp.comp}
-            </h3>
-            <p>{exp.desc}</p>
-            <Skills>
-              {exp.skills.map((skill, i) => (
-                <span key={i}>{skill}</span>
-              ))}
-            </Skills>
+            <Reveal>
+              <h3>
+                {exp.pos} {"·"} {exp.comp}
+              </h3>
+            </Reveal>
+            <Reveal>
+              <p>{exp.desc}</p>
+            </Reveal>
+            <Reveal>
+              <Skills>
+                {exp.skills.map((skill, i) => (
+                  <span key={i}>{skill}</span>
+                ))}
+              </Skills>
+            </Reveal>
           </InfoExp>
         </InExp>
       ))}

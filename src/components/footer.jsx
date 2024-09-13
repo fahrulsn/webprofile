@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import styled from "styled-components";
+import { Reveal } from "../utils/Reveal";
 
 const InFooter = styled.div`
   font-size: 0.8rem;
@@ -14,10 +15,12 @@ const InFooter = styled.div`
 const Footer = () => {
   return (
     <InFooter>
-      Designed flexible using <span>Figma</span> and personally coded it using{" "}
-      <span>Visual Studio Code</span>. Built with <span>React.js</span> styled
-      components, and deployed with <span>Vercel</span>. The text is styled
-      using the <span>Inter</span> typeface.
+      <Reveal>
+        Designed flexible using <span>Figma</span> and personally coded it using{" "}
+        <span>Visual Studio Code</span>. Built with <span>React.js</span> styled
+        components, and deployed with <span>Vercel</span>. The text is styled
+        using the <span>Inter</span> typeface.
+      </Reveal>
     </InFooter>
   );
 };

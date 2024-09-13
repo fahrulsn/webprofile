@@ -114,11 +114,13 @@ const Navigation = () => {
       <a href="#about" className="onHover">
         <p className={activeSection == "about" ? "active" : ""}>ABOUT</p>
       </a>
+
       <a href="#experience" className="onHover">
         <p className={activeSection == "experience" ? "active" : ""}>
           EXPERIENCES
         </p>
       </a>
+
       <a href="#projects" className="onHover">
         <p className={activeSection == "projects" ? "active" : ""}>PROJECTS</p>
       </a>
