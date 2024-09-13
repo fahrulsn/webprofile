@@ -63,8 +63,7 @@ export function Reveal({
           bottom: 4,
           left: 0,
           right: 0,
-          background:
-            "linear-gradient(120deg,rgba(61, 255, 174,1) 20%,rgb(69, 158, 177) 100%)",
+          background: "rgba(61, 255, 174,1)",
           zIndex: 10,
           ...style2,
         }}
