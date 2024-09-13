@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 const IconGithub = ({ height = "100%", width = "100%" }) => (
   <svg
     height={height}

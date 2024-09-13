@@ -12,7 +12,7 @@ export function Reveal({
   delay = 0.25,
 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.2 });
+  const isInView = useInView(ref, { amount: 0.3 });
 
   const mainControls = useAnimation();
   const slideControls = useAnimation();
@@ -63,7 +63,8 @@ export function Reveal({
           bottom: 4,
           left: 0,
           right: 0,
-          background: "rgba(61, 255, 174, 1)",
+          background:
+            "linear-gradient(120deg,rgba(61, 255, 174,1) 20%,rgb(69, 158, 177) 100%)",
           zIndex: 10,
           ...style2,
         }}
